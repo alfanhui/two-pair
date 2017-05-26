@@ -25,13 +25,13 @@ public class GameController : Singleton<GameController>{
 	public GameController(){
 		gameModel = new GameModel ();
 		randomNumberGenerator = new System.Random ();
-		twoPlayerGameCanvasAnimator.GetComponent<Animator> ();
 	}
 
 	public void SetupGame(string gameName){
 		gameModel.initialiseGame (gameName);
 		UpdateSummaryUI ();
 		twoPlayerGameCanvasAnimator.SetInteger ("TimerAmount", gameModel.Timer);
+		fourPlayerGameCanvasAnimator.SetInteger ("TimerAmount", gameModel.Timer);
 	}
 
 	public void UpdateSummaryUI(){
@@ -46,6 +46,7 @@ public class GameController : Singleton<GameController>{
 		string randomWord;
 		gameModel.WordsInPlayContainer.TryGetValue(getAppropriateRandomNumber(), out randomWord );
 		twoPlayerWordLabel.GetComponent<Text> ().text = randomWord;
+		fourPlayerWordLabel.GetComponent<Text> ().text = randomWord;
 	}
 
 	private int getAppropriateRandomNumber(){

@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
+using System.IO;
+using System.Text;
 
 public class XMLtoContainer : Singleton<XMLtoContainer>{
 
@@ -12,13 +14,13 @@ public class XMLtoContainer : Singleton<XMLtoContainer>{
 	}
 	
 	public Container container = new Container ();
-	private XmlTextReader xmlReader;
+	private XmlReader xmlReader;
 	private string[] containerNames = {"BFF", "BOOKS", "MOVIES", "NOUNS", "SHOWS", "SUMMARIES"};
 
 
 	void InitialiseContainers(){
 		foreach (string filename in containerNames) {
-			TryLocatingXMLFile ("Assets/XML/" + filename + ".xml");
+			TryLocatingXMLFile (filename);
 			if (filename == "SUMMARIES")
 				LoadSummariesFromXML ();
 			else
@@ -26,9 +28,10 @@ public class XMLtoContainer : Singleton<XMLtoContainer>{
 		}
 	}
 
-	private void TryLocatingXMLFile(string XMLFilename){
+	private void TryLocatingXMLFile(string filename){
 		try{
-			xmlReader = new XmlTextReader (XMLFilename);
+			TextAsset file = (TextAsset)Resources.Load(filename);
+			xmlReader = XmlReader.Create(new StringReader(file.text));
 		}catch(Exception e){
 			Debug.Log ("Error: " + e);
 		}
