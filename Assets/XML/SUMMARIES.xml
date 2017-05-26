@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Microsoft Office User</Author>
+  <LastAuthor>Microsoft Office User</LastAuthor>
+  <Created>2017-05-25T16:33:13Z</Created>
+  <LastSaved>2017-05-25T16:39:52Z</LastSaved>
+  <Version>15.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+  <PixelsPerInch>96</PixelsPerInch>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>17460</WindowHeight>
+  <WindowWidth>14400</WindowWidth>
+  <WindowTopX>14400</WindowTopX>
+  <WindowTopY>460</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="8" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="16">
+   <Column ss:Width="107"/>
+   <Column ss:Width="1114"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">5SecondSummaries</Data></Cell>
+    <Cell><Data ss:Type="String">You have 5 seconds to describe the plot of the movie. After the timer, they have to guess the movie title. You cannot say any of the characters names or the title of the movie.</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">BFF</Data></Cell>
+    <Cell><Data ss:Type="String">Both answer the question in private, after both have written down, compare your answers to see if you are best friends or not…</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Jinx</Data></Cell>
+    <Cell><Data ss:Type="String">Hold each others hand. A category is given: after 3 seconds, both must say aloud their answer. Say the same thing to win Jinx. </Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">SayAnything</Data></Cell>
+    <Cell><Data ss:Type="String">DRINKING GAME (hint they all are..): place 3 shots each in front of you's. Alternate between you's saying a random word. First person to hesistate longer than 2 seconds or repeats a word.. LOSES.</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Whisper</Data></Cell>
+    <Cell><Data ss:Type="String">Give the guesser headphones, turn up the volumn! Whisper the word to guesser who is wearing the headphones. The guesser has to guess the word by lip-reading.</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Password</Data></Cell>
+    <Cell><Data ss:Type="String">In pairs, give a 1 letter clue of the 'password' and your partner has to guess it. If they fail to get it, it is passed onto the next team, with another clue. So on/so forth!</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Charades</Data></Cell>
+    <Cell><Data ss:Type="String">In pairs, one team mate gets a clue and has to act in silent the clue to their team mate. 30 Seconds on the clock to guess!</Data></Cell>
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Catchphrase</Data></Cell>
+    <Cell><Data ss:Type="String">In pairs, in a circle with your partner opposite. Describe the clue to your partner, you can say anything except any word in the clue. Pass to the right once they get it right. When the time runs out, the team still giving a clue loses.</Data></Cell>
+    <Cell><Data ss:Type="Number">45</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>4</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+   <x:Print>    </x:Print>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
