@@ -3,9 +3,9 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour{
+public class GameController : Singleton<GameController>{
 
-	private GameModel gameModel;
+	public GameModel gameModel;
 	private System.Random randomNumberGenerator;
 
 	[Header("Summary Canvas")]
@@ -14,19 +14,24 @@ public class GameController : MonoBehaviour{
 	public GameObject fourPlayerRules;
 	public GameObject fourPlayerHeaderText;
 	[Header("Game Canvas")]
-	public GameObject twoPlayerStartButton;
-	public GameObject fourPlayerStartButton;
+	public GameObject twoPlayerWordLabel;
+	public GameObject fourPlayerWordLabel;
 	[Header("Main Camera")]
 	public GameObject mainCamera;
+
+	public Animator twoPlayerGameCanvasAnimator;
+	public Animator fourPlayerGameCanvasAnimator;
 
 	public GameController(){
 		gameModel = new GameModel ();
 		randomNumberGenerator = new System.Random ();
+		twoPlayerGameCanvasAnimator.GetComponent<Animator> ();
 	}
 
 	public void SetupGame(string gameName){
 		gameModel.initialiseGame (gameName);
 		UpdateSummaryUI ();
+		twoPlayerGameCanvasAnimator.SetInteger ("TimerAmount", gameModel.Timer);
 	}
 
 	public void UpdateSummaryUI(){
@@ -37,9 +42,10 @@ public class GameController : MonoBehaviour{
 
 	}
 
-	public void StartGameButton(){
-		
-
+	public void DisplayRandomWord(){
+		string randomWord;
+		gameModel.WordsInPlayContainer.TryGetValue(getAppropriateRandomNumber(), out randomWord );
+		twoPlayerWordLabel.GetComponent<Text> ().text = randomWord;
 	}
 
 	private int getAppropriateRandomNumber(){
