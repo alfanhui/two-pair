@@ -19,12 +19,23 @@ public class GameController : Singleton<GameController>{
 	[Header("Main Camera")]
 	public GameObject mainCamera;
 
+	[Header("BFF INPUTS")]
+	public Text playerOneInputField;
+	public Text playerTwoInputField;
+	private Color playerOneInputFieldColor;
+	private Color playerTwoInputFieldColor;
+
 	public Animator twoPlayerGameCanvasAnimator;
 	public Animator fourPlayerGameCanvasAnimator;
 
 	public GameController(){
 		gameModel = new GameModel ();
 		randomNumberGenerator = new System.Random ();
+	}
+
+	void Start(){
+		playerOneInputFieldColor = playerOneInputField.color;
+		playerTwoInputFieldColor = playerTwoInputField.color;
 	}
 
 	public void SetupGame(string gameName){
@@ -52,6 +63,20 @@ public class GameController : Singleton<GameController>{
 	private int getAppropriateRandomNumber(){
 		return Convert.ToInt32(randomNumberGenerator.Next(gameModel.WordsInPlayContainer.Count));
 	}
+
+
+	public void ResetInputFields(){
+		playerOneInputField.GetComponentInParent<InputField> ().text = "";
+		playerOneInputField.color = playerOneInputFieldColor;
+		playerTwoInputField.GetComponentInParent<InputField> ().text = "";
+		playerTwoInputField.color = playerTwoInputFieldColor;
+	}
+
+	public void RevealInputFields(){
+		playerOneInputField.color = Color.black;
+		playerTwoInputField.color = Color.black;
+	}
+
 
 }
 

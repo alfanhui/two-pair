@@ -78,7 +78,7 @@ public class GameModel{
 			break;
 		case "Catchphrase":
 			wordsInPlayContainer = XMLtoContainer.Instance.container.GetContainerUsingSwitch ("NOUNS");
-			title = "Charades";
+			title = "Catchphrase";
 			timer = XMLtoContainer.Instance.container.Timer [7];
 			break;
 		}
